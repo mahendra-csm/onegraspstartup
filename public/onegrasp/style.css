@@ -35,9 +35,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 @media(hover:hover){#cursor-glow{opacity:1}}
 
 /* Sticky bar */
-#sticky-bar{position:fixed;top:0;left:0;right:0;background:#000;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;z-index:1000;font-size:14px;gap:16px;flex-wrap:wrap}
-.sb-mid{font-family:'Montserrat';font-weight:700;color:var(--red)}
-.sb-right{display:flex;gap:8px}
+#sticky-bar{position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#000,#1a0606,#000);color:#fff;z-index:1000;font-size:13px;border-bottom:1px solid rgba(225,6,0,.25)}
+.sb-inner{max-width:var(--container);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:8px 24px;gap:16px;flex-wrap:nowrap}
+.sb-left{display:flex;align-items:center;white-space:nowrap}
+.sb-mid{font-family:'Montserrat';font-weight:700;color:var(--red);white-space:nowrap}
+.sb-right{display:flex;gap:8px;align-items:center}
+.btn-sm{padding:7px 14px;font-size:12px}
 .pulse-dot{display:inline-block;width:8px;height:8px;background:var(--red);border-radius:50%;margin-right:6px;animation:pdot 1.2s infinite}
 @keyframes pdot{0%,100%{box-shadow:0 0 0 0 var(--red-glow)}50%{box-shadow:0 0 0 8px transparent}}
 
