@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OneGrasp Startup Bootcamp | Learn from IIT/IIM Alumni</title>
+<meta name="description" content="OneGrasp 3-Day Startup Bootcamp — May 15-17, WE HUB Hyderabad. Learn entrepreneurship, AI tools, pitching from IIT/IIM alumni. Limited seats. Register now." />
+<meta name="keywords" content="OneGrasp, Startup Bootcamp, Entrepreneurship, IIT IIM, Hyderabad, WE HUB, AI for startups" />
+<meta property="og:title" content="OneGrasp 3-Day Startup Bootcamp" />
+<meta property="og:description" content="Build Ideas. Lead Tomorrow. May 15-17, WE HUB Hyderabad." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader"><div class="loader-ring"></div><div class="loader-text">OneGrasp</div></div>
+
+<!-- Scroll progress -->
+<div id="scroll-progress"></div>
+
+<!-- Cursor glow -->
+<div id="cursor-glow"></div>
+
+<!-- Sticky Top Bar -->
+<div id="sticky-bar">
+  <div class="sb-left"><span class="pulse-dot"></span> Seats Filling Fast — <strong>Only <span id="seats-left">23</span> seats left</strong></div>
+  <div class="sb-mid">Closes in: <span id="countdown">--</span></div>
+  <div class="sb-right">
+    <button class="btn btn-ghost" onclick="openRegister()">Register</button>
+    <button class="btn btn-primary pulse" onclick="payNow()">Pay ₹18,000</button>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo"><span class="logo-mark">OG</span><span class="logo-text">OneGrasp</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#learn">Learn</a></li>
+      <li><a href="#mentors">Mentors</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <button class="btn btn-primary" onclick="openRegister()">Register Now</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
+    <div id="particles"></div>
+  </div>
+  <div class="hero-grid container">
+    <div class="hero-left reveal">
+      <div class="badge"><span>★</span> IIT / IIM Alumni Mentors</div>
+      <h1>3-Day Startup<br/><span class="grad">Bootcamp</span></h1>
+      <p class="tagline">Build Ideas. Lead Tomorrow.</p>
+      <div class="hero-meta">
+        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">May 15, 16, 17</span></div>
+        <div class="meta-item"><span class="meta-label">Venue</span><span class="meta-value">WE HUB, Hyderabad</span></div>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg pulse" onclick="openRegister()">Register Now →</button>
+        <a class="btn btn-outline btn-lg" href="#about">Download Brochure</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card glass"><div class="stat-num" data-count="500">0</div><div>Students+</div></div>
+        <div class="stat-card glass"><div class="stat-num">Limited</div><div>Seats</div></div>
+        <div class="stat-card glass"><div class="stat-num">✓</div><div>Certificates</div></div>
+      </div>
+    </div>
+    <div class="hero-right reveal">
+      <div class="collage">
+        <img loading="lazy" class="c1 floaty" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" alt="Startup Bootcamp poster" />
+        <img loading="lazy" class="c2 floaty" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg" alt="Bootcamp students" />
+        <img loading="lazy" class="c3 floaty" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg" alt="Mentor session" />
+        <div class="c-badge glass">🔥 Cohort 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container two-col">
+    <div class="reveal">
+      <div class="img-collage">
+        <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" alt="About bootcamp" />
+        <div class="overlay-red"></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">About the Bootcamp</span>
+      <h2>From idea to launch in <span class="grad">3 powerful days</span></h2>
+      <p class="lead">An immersive bootcamp engineered for the next generation of founders. Master entrepreneurship, finance, leadership, AI tools, pitching and innovation — guided by IIT/IIM alumni and real startup founders.</p>
+      <div class="feat-grid">
+        <div class="feat glass"><h4>Entrepreneurship</h4><p>Mindset, models, momentum.</p></div>
+        <div class="feat glass"><h4>Finance Basics</h4><p>Unit economics & funding.</p></div>
+        <div class="feat glass"><h4>AI Tools</h4><p>Build faster with AI.</p></div>
+        <div class="feat glass"><h4>Pitching</h4><p>Shark-tank style demos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARN -->
+<section id="learn" class="section dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Curriculum</span>
+      <h2>What You Will <span class="grad">Master</span></h2>
+    </div>
+    <div class="learn-grid">
+      <div class="learn-card glass reveal"><div class="ic">🧠</div><h4>Critical Thinking</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">💡</div><h4>Creativity</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">🗣️</div><h4>Communication</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">🤝</div><h4>Collaboration</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">💰</div><h4>Finance Basics</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">🚀</div><h4>Startup Validation</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">🤖</div><h4>AI for Startups</h4></div>
+      <div class="learn-card glass reveal"><div class="ic">🦈</div><h4>Shark Tank Pitching</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORS -->
+<section id="mentors" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Mentors</span>
+      <h2>Learn From <span class="grad">IIT / IIM Alumni</span></h2>
+      <p>Founders, investors and operators with real battle scars.</p>
+    </div>
+    <div class="mentor-grid">
+      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=12" alt="Mentor"></div><h4>Arjun Mehta</h4><p>Startup Founder · IIT Bombay</p></div>
+      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=32" alt="Mentor"></div><h4>Priya Rao</h4><p>Investor · IIM Ahmedabad</p></div>
+      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=15" alt="Mentor"></div><h4>Karan Shah</h4><p>AI Product Lead · IIT Madras</p></div>
+      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=45" alt="Mentor"></div><h4>Neha Verma</h4><p>VC Mentor · IIM Bangalore</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY JOIN -->
+<section class="section dark">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Why Join</span><h2>Built for <span class="grad">Real Outcomes</span></h2></div>
+    <div class="why-row">
+      <div class="why-card glass reveal"><h4>Real Startup Exposure</h4><p>Work on live problems & ventures.</p></div>
+      <div class="why-card glass reveal"><h4>Networking</h4><p>Founders, peers, investors.</p></div>
+      <div class="why-card glass reveal"><h4>Certification</h4><p>Industry-recognized certificate.</p></div>
+      <div class="why-card glass reveal"><h4>Research DOI Support</h4><p>Publish your work officially.</p></div>
+      <div class="why-card glass reveal"><h4>Pitching Opportunities</h4><p>Pitch to real investors.</p></div>
+      <div class="why-card glass reveal"><h4>Team Collaboration</h4><p>Build with co-founders.</p></div>
+      <div class="why-card glass reveal"><h4>Ecosystem Access</h4><p>WE HUB & startup network.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Pricing</span><h2>Secure Your <span class="grad">Seat</span></h2></div>
+    <div class="price-wrap reveal">
+      <div class="price-card">
+        <div class="ribbon">Limited Time Offer</div>
+        <h3>3-Day Bootcamp Pass</h3>
+        <div class="price-row">
+          <span class="strike">₹70,000</span>
+          <span class="price">₹18,000</span>
+        </div>
+        <p class="closing">⏳ Closing Soon · Only <span id="seats-left-2">23</span> seats left</p>
+        <ul class="incl">
+          <li>✓ 3 days of intensive sessions</li>
+          <li>✓ Certificate of completion</li>
+          <li>✓ Mentor 1:1 access</li>
+          <li>✓ Pitching to real investors</li>
+          <li>✓ Lunch & refreshments</li>
+        </ul>
+        <button class="btn btn-primary btn-lg pulse w-full" onclick="payNow()">Secure Your Seat →</button>
+        <button class="btn btn-outline w-full" onclick="openRegister()">Register Form</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section dark">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Testimonials</span><h2>Loved by <span class="grad">Future Founders</span></h2></div>
+    <div class="t-slider">
+      <div class="t-track" id="tTrack">
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=22" alt=""><p>"Changed how I think about building products. Pitched to a real VC by Day 3!"</p><strong>Rohan, 19 · Hyderabad</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=47" alt=""><p>"The AI sessions alone were worth 10x the price. Premium experience."</p><strong>Aditi, 21 · Bangalore</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=33" alt=""><p>"Met my co-founder here. We've raised pre-seed since."</p><strong>Vikram, 22 · Mumbai</strong><div class="stars">★★★★★</div></div>
+      </div>
+      <div class="t-dots" id="tDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Gallery</span><h2>Inside The <span class="grad">Bootcamp</span></h2></div>
+    <div class="gallery">
+      <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" alt="g1" onclick="openLightbox(this.src)">
+      <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg" alt="g2" onclick="openLightbox(this.src)">
+      <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg" alt="g3" onclick="openLightbox(this.src)">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600" alt="g4" onclick="openLightbox(this.src)">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600" alt="g5" onclick="openLightbox(this.src)">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600" alt="g6" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section dark">
+  <div class="container narrow">
+    <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Questions, <span class="grad">Answered</span></h2></div>
+    <div class="faq">
+      <details><summary>Who can join?</summary><p>Students aged 14-25 passionate about startups, innovation and leadership.</p></details>
+      <details><summary>Is a certificate included?</summary><p>Yes — every participant receives an industry-recognized certificate.</p></details>
+      <details><summary>Is prior startup knowledge needed?</summary><p>No prior experience required. The program is built for beginners and intermediates alike.</p></details>
+      <details><summary>Will there be team activities?</summary><p>Absolutely — collaboration, hackathons, and pitching are core to the program.</p></details>
+      <details><summary>Is payment refundable?</summary><p>Registration fees are non-refundable but transferable up to 7 days before the event.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section final-cta">
+  <div class="cta-bg"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+  <div class="container center reveal">
+    <h2>Your Startup Journey<br/><span class="grad">Starts Here.</span></h2>
+    <p>Join 500+ ambitious founders. Limited seats. Closing soon.</p>
+    <div class="hero-cta center">
+      <button class="btn btn-primary btn-lg pulse" onclick="openRegister()">Register Now →</button>
+      <a class="btn btn-outline btn-lg" href="https://wa.me/919999999999">Talk to Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <div class="logo"><span class="logo-mark">OG</span><span class="logo-text">OneGrasp</span></div>
+      <p>Building the next generation of founders.</p>
+    </div>
+    <div>
+      <h5>Quick Links</h5>
+      <a href="#about">About</a><a href="#learn">Curriculum</a><a href="#mentors">Mentors</a><a href="#pricing">Pricing</a>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <a href="mailto:hello@onegrasp.com">hello@onegrasp.com</a>
+      <a href="tel:+919999999999">+91 99999 99999</a>
+      <a>WE HUB, Hyderabad</a>
+    </div>
+    <div>
+      <h5>Follow</h5>
+      <div class="socials">
+        <a aria-label="Instagram">IG</a><a aria-label="LinkedIn">IN</a><a aria-label="YouTube">YT</a><a aria-label="X">X</a>
+      </div>
+    </div>
+  </div>
+  <div class="copy">© 2026 OneGrasp. All rights reserved.</div>
+</footer>
+
+<!-- WhatsApp float -->
+<a id="whatsapp-float" href="https://wa.me/919999999999" aria-label="WhatsApp" target="_blank">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20.52 3.48A11.88 11.88 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.12 1.6 5.92L0 24l6.4-1.68a11.86 11.86 0 0 0 5.65 1.44h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.39-8.44zM12.06 21.5h-.01a9.7 9.7 0 0 1-4.95-1.36l-.36-.21-3.8 1 1.02-3.7-.23-.38a9.66 9.66 0 0 1-1.5-5.16c0-5.36 4.36-9.72 9.72-9.72 2.6 0 5.04 1.01 6.87 2.85a9.65 9.65 0 0 1 2.85 6.87c0 5.36-4.36 9.72-9.61 9.72z"/></svg>
+</a>
+
+<!-- Toasts -->
+<div id="toasts"></div>
+
+<!-- Register Modal -->
+<div id="modal" class="modal-bg" onclick="if(event.target===this)closeRegister()">
+  <div class="modal glass">
+    <button class="x" onclick="closeRegister()">×</button>
+    <h3>Register for Bootcamp</h3>
+    <p class="sub">May 15-17 · WE HUB Hyderabad</p>
+    <form onsubmit="submitForm(event)">
+      <input required name="name" placeholder="Full Name" />
+      <input required name="phone" placeholder="Phone" type="tel" />
+      <input required name="email" placeholder="Email" type="email" />
+      <div class="row">
+        <input required name="age" placeholder="Age" type="number" min="10" max="60" />
+        <input required name="city" placeholder="City" />
+      </div>
+      <input required name="school" placeholder="School / College" />
+      <div class="row">
+        <button type="submit" class="btn btn-outline w-full">Register</button>
+        <button type="button" class="btn btn-primary w-full pulse" onclick="payNow()">Pay Now ₹18,000</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="this.classList.remove('open')"><img id="lbImg" alt=""></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
