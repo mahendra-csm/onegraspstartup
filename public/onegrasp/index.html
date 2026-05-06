@@ -3,355 +3,803 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>OneGrasp Startup Bootcamp | Learn from IIT/IIM Alumni</title>
-<meta name="description" content="OneGrasp 3-Day Startup Bootcamp — May 15-17, WE HUB Hyderabad. Learn entrepreneurship, AI tools, pitching from IIT/IIM alumni. Limited seats. Register now." />
-<meta name="keywords" content="OneGrasp, Startup Bootcamp, Entrepreneurship, IIT IIM, Hyderabad, WE HUB, AI for startups" />
-<meta property="og:title" content="OneGrasp 3-Day Startup Bootcamp" />
-<meta property="og:description" content="Build Ideas. Lead Tomorrow. May 15-17, WE HUB Hyderabad." />
+<title>OneGrasp Startup Bootcamp | Build. Pitch. Launch.</title>
+<meta
+  name="description"
+  content="OneGrasp Startup Bootcamp for Grade 8 to 12 students in Hyderabad. Build ideas, learn startup skills, and pitch with confidence in a 3-day immersive experience."
+/>
+<meta
+  name="keywords"
+  content="OneGrasp, Startup Bootcamp, Students, Entrepreneurship, Hyderabad, Pitching, Startup Curriculum"
+/>
+<meta property="og:title" content="OneGrasp Startup Bootcamp" />
+<meta
+  property="og:description"
+  content="From Classrooms to Boardrooms. Build. Pitch. Launch."
+/>
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" />
+<meta
+  property="og:image"
+  content="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg"
+/>
 <link rel="icon" href="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+/>
 <link rel="stylesheet" href="style.css" />
 <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 </head>
 <body>
 
-<!-- Preloader -->
-<div id="preloader"><div class="loader-ring"></div><div class="loader-text">OneGrasp</div></div>
-
-<!-- Scroll progress -->
-<div id="scroll-progress"></div>
-
-<!-- Cursor glow -->
-<div id="cursor-glow"></div>
-
-<!-- Sticky Top Bar -->
-<div id="sticky-bar">
-  <div class="sb-inner">
-    <div class="sb-left"><span class="pulse-dot"></span> Seats Filling Fast — <strong>Only <span id="seats-left">23</span> left</strong></div>
-    <div class="sb-mid">⏳ Closes in: <span id="countdown">--</span></div>
-    <div class="sb-right">
-      <button class="btn btn-ghost btn-sm" onclick="openRegister()">Register</button>
-      <button class="btn btn-primary btn-sm pulse" onclick="payNow()">Pay ₹18,000</button>
-    </div>
-  </div>
+<div id="preloader">
+  <div class="loader-ring"></div>
+  <div class="loader-text">OneGrasp</div>
 </div>
 
-<!-- Navbar -->
+<div id="scroll-progress"></div>
+
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#" class="logo">
-      <img src="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png" alt="OneGrasp" class="logo-img" />
+    <a href="#hero" class="logo" aria-label="OneGrasp Home">
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png"
+        alt="OneGrasp"
+        class="logo-img"
+      />
     </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#learn">Learn</a></li>
-      <li><a href="#mentors">Mentors</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#join">Who Can Join</a></li>
+      <li><a href="#faq">FAQs</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="btn btn-primary" onclick="openRegister()">Register Now</button>
+    <button class="btn btn-primary nav-cta" onclick="openRegister()">Apply Now</button>
   </div>
 </nav>
 
-<!-- HERO -->
 <header id="hero">
   <div class="hero-bg">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
     <div class="grid-overlay"></div>
-    <div id="particles"></div>
   </div>
   <div class="hero-grid container">
-    <div class="hero-left reveal">
-      <div class="badge"><span>★</span> IIT / IIM Alumni Mentors</div>
-      <h1>3-Day Startup<br/><span class="grad">Bootcamp</span></h1>
-      <p class="tagline">Build Ideas. Lead Tomorrow.</p>
-      <div class="hero-meta">
-        <div class="meta-item"><span class="meta-label">Date</span><span class="meta-value">May 15, 16, 17</span></div>
-        <div class="meta-item"><span class="meta-label">Venue</span><span class="meta-value">WE HUB, Hyderabad</span></div>
+    <div class="hero-left">
+      <div class="badge">3-DAY STARTUP BOOTCAMP</div>
+      <h1>
+        From Classrooms to Boardrooms.
+        <span class="grad">Build. Pitch. Launch.</span>
+      </h1>
+      <p class="tagline">
+        A hands-on startup experience for Grade 8 to 12 students at WE HUB, Hyderabad.
+      </p>
+      <div class="hero-priority">
+        <div class="priority-card priority-card-accent">
+          <span class="priority-label">Dates</span>
+          <strong>May 15, 16, 17, 2026</strong>
+          <small>3-day in-person bootcamp</small>
+        </div>
+        <div class="priority-card">
+          <span class="priority-label">Venue</span>
+          <strong>WE HUB, Hyderabad</strong>
+          <small>Startup-focused learning environment</small>
+        </div>
       </div>
       <div class="hero-cta">
-        <button class="btn btn-primary btn-lg pulse" onclick="openRegister()">Register Now →</button>
-        <a class="btn btn-outline btn-lg" href="#about">Download Brochure</a>
+        <button class="btn btn-primary btn-lg" onclick="openRegister()">Register Now</button>
       </div>
-      <div class="hero-stats">
-        <div class="stat-card glass"><div class="stat-num" data-count="500">0</div><div>Students+</div></div>
-        <div class="stat-card glass"><div class="stat-num">Limited</div><div>Seats</div></div>
-        <div class="stat-card glass"><div class="stat-num">✓</div><div>Certificates</div></div>
+      <div class="hero-highlights">
+        <div class="highlight-card">
+          <h4>Hands-on</h4>
+          <p>Learn by building</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Team-based</h4>
+          <p>Create with peers</p>
+        </div>
+        <div class="highlight-card">
+          <h4>Pitch-ready</h4>
+          <p>Present with confidence</p>
+        </div>
       </div>
     </div>
-    <div class="hero-right reveal">
-      <div class="collage">
-        <img loading="lazy" class="c1 floaty" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" alt="Startup Bootcamp poster" />
-        <img loading="lazy" class="c2 floaty" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg" alt="Bootcamp students" />
-        <img loading="lazy" class="c3 floaty" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg" alt="Mentor session" />
-        <div class="c-badge glass">🔥 Cohort 2026</div>
+    <div class="hero-right">
+      <div class="hero-visual">
+        <img
+          class="hero-main-image"
+          src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg"
+          alt="Students collaborating around a laptop in a startup workshop"
+        />
       </div>
     </div>
   </div>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container two-col">
-    <div class="reveal">
-      <div class="img-collage">
-        <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" alt="About bootcamp" />
-        <div class="overlay-red"></div>
-      </div>
+<section id="program" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why OneGrasp</span>
+      <h2>We <span class="grad">complement</span> school education.</h2>
+      <p>
+        We build on what schools do best and add real-world, future-ready skills.
+      </p>
     </div>
-    <div class="reveal">
-      <span class="eyebrow">About the Bootcamp</span>
-      <h2>From idea to launch in <span class="grad">3 powerful days</span></h2>
-      <p class="lead">An immersive bootcamp engineered for the next generation of founders. Master entrepreneurship, finance, leadership, AI tools, pitching and innovation — guided by IIT/IIM alumni and real startup founders.</p>
-      <div class="feat-grid">
-        <div class="feat glass"><h4>Entrepreneurship</h4><p>Mindset, models, momentum.</p></div>
-        <div class="feat glass"><h4>Finance Basics</h4><p>Unit economics & funding.</p></div>
-        <div class="feat glass"><h4>AI Tools</h4><p>Build faster with AI.</p></div>
-        <div class="feat glass"><h4>Pitching</h4><p>Shark-tank style demos.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card reveal">
+        <span class="feature-icon">01</span>
+        <h3>Experiential Learning</h3>
+        <p>Beyond textbooks with practical team-based problem solving.</p>
+      </article>
+      <article class="feature-card reveal">
+        <span class="feature-icon">02</span>
+        <h3>Real-World Exposure</h3>
+        <p>Students work through startup situations beyond the classroom.</p>
+      </article>
+      <article class="feature-card reveal">
+        <span class="feature-icon">03</span>
+        <h3>Collaborative Environment</h3>
+        <p>Peer learning, team energy, and shared idea-building.</p>
+      </article>
+      <article class="feature-card reveal">
+        <span class="feature-icon">04</span>
+        <h3>Future-Ready Skills</h3>
+        <p>Confidence, communication, creativity and founder thinking.</p>
+      </article>
+    </div>
+    <div class="program-showcase reveal">
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg"
+        alt="Students engaging in a startup bootcamp session"
+      />
+      <div class="program-showcase-copy">
+        <span class="eyebrow eyebrow-inline">Why students stay engaged</span>
+        <h3>Every session moves from learning to action.</h3>
+        <p>
+          Instead of long passive lectures, students move through guided activities,
+          team tasks, idea validation and presentation checkpoints.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LEARN — Redesigned: Bento + Hex/Marquee hybrid -->
-<section id="learn" class="section dark">
+<section class="section section-soft">
+  <div class="container policy-layout">
+    <div class="policy-copy reveal">
+      <span class="eyebrow">NEP and 4Cs</span>
+      <h2>
+        Aligned with India&apos;s
+        <span class="grad">National Education Policy - 4Cs</span>
+      </h2>
+      <p>
+        We nurture the 4Cs essential for every future-ready learner and turn them
+        into visible skills through practical startup work.
+      </p>
+      <a class="btn btn-outline" href="#curriculum">Learn more about 4Cs</a>
+    </div>
+    <div class="policy-grid reveal">
+      <article class="policy-card policy-card-rose">
+        <span class="policy-kicker">Critical Thinking</span>
+        <p>Question, analyse and make better decisions.</p>
+      </article>
+      <article class="policy-card policy-card-cream">
+        <span class="policy-kicker">Creativity</span>
+        <p>Plan, create and bring your ideas to life.</p>
+      </article>
+      <article class="policy-card policy-card-white">
+        <span class="policy-kicker">Communication</span>
+        <p>Express ideas clearly and present with confidence.</p>
+      </article>
+      <article class="policy-card policy-card-mint">
+        <span class="policy-kicker">Collaboration</span>
+        <p>Work in teams and embrace different perspectives.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Student Journey</span>
+      <h2>What Students Will <span class="grad">Do</span></h2>
+      <p>A complete startup journey in just 3 days.</p>
+    </div>
+    <div class="journey-banner reveal">
+      <div class="journey-banner-copy">
+        <span class="eyebrow eyebrow-inline">Journey Snapshot</span>
+        <h3>From idea spark to final pitch in one clean flow.</h3>
+        <p>
+          The bootcamp is designed like a guided founder sprint, so students always know
+          what comes next and why it matters.
+        </p>
+      </div>
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg"
+        alt="Students working through a startup activity"
+      />
+    </div>
+    <div class="journey-grid">
+      <article class="journey-step reveal">
+        <span>01</span>
+        <h3>Startup mindset</h3>
+        <p>Understand how founders think and evaluate opportunities.</p>
+      </article>
+      <article class="journey-step reveal">
+        <span>02</span>
+        <h3>Identify problems</h3>
+        <p>Look for real pain points worth solving.</p>
+      </article>
+      <article class="journey-step reveal">
+        <span>03</span>
+        <h3>Build ideas</h3>
+        <p>Create product or service concepts as a team.</p>
+      </article>
+      <article class="journey-step reveal">
+        <span>04</span>
+        <h3>Plan revenue</h3>
+        <p>Understand business models, pricing and value.</p>
+      </article>
+      <article class="journey-step reveal">
+        <span>05</span>
+        <h3>Design go-to-market</h3>
+        <p>Map how the idea reaches real customers.</p>
+      </article>
+      <article class="journey-step reveal">
+        <span>06</span>
+        <h3>Pitch live</h3>
+        <p>Present the startup idea to an audience with confidence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="curriculum" class="section section-soft">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Curriculum</span>
       <h2>What You Will <span class="grad">Master</span></h2>
-      <p>Eight elite skills. Three intense days. One transformed founder.</p>
+      <p>
+        A calmer, clearer curriculum layout built around the 3-day learning arc.
+      </p>
     </div>
-    <div class="bento reveal">
-      <div class="bento-item bento-lg b-grad">
-        <div class="b-num">01</div>
-        <h3>Critical Thinking</h3>
-        <p>Solve like a founder — frameworks used by IIT/IIM alumni to break down ambiguity into action.</p>
-        <div class="b-tag">Day 1</div>
-      </div>
-      <div class="bento-item">
-        <div class="b-num">02</div>
-        <h4>Creativity</h4>
-        <p>Idea engines that never run dry.</p>
-      </div>
-      <div class="bento-item">
-        <div class="b-num">03</div>
-        <h4>Communication</h4>
-        <p>Speak so investors lean in.</p>
-      </div>
-      <div class="bento-item bento-wide b-dark">
-        <div class="b-num">04</div>
-        <h3>Startup Validation</h3>
-        <p>Test, learn, ship — without burning capital. Real customer-discovery sprints.</p>
-        <div class="b-tag">Day 2</div>
-      </div>
-      <div class="bento-item">
-        <div class="b-num">05</div>
-        <h4>Finance Basics</h4>
-        <p>Burn, runway, unit economics.</p>
-      </div>
-      <div class="bento-item">
-        <div class="b-num">06</div>
-        <h4>Collaboration</h4>
-        <p>Build co-founder chemistry.</p>
-      </div>
-      <div class="bento-item bento-wide b-grad">
-        <div class="b-num">07</div>
-        <h3>AI for Startups</h3>
-        <p>Use GPT, automation & no-code stacks to ship 10x faster than any competitor.</p>
-        <div class="b-tag">Day 3</div>
-      </div>
-      <div class="bento-item bento-lg b-dark">
-        <div class="b-num">08</div>
-        <h3>Shark Tank Pitching</h3>
-        <p>Pitch live to real investors. Walk out with feedback, network, and momentum.</p>
-        <div class="b-tag">Finale</div>
-      </div>
-    </div>
-    <div class="marquee">
-      <div class="marquee-track">
-        <span>★ Critical Thinking</span><span>★ Creativity</span><span>★ AI Tools</span><span>★ Finance</span><span>★ Pitching</span><span>★ Validation</span><span>★ Collaboration</span><span>★ Communication</span>
-        <span>★ Critical Thinking</span><span>★ Creativity</span><span>★ AI Tools</span><span>★ Finance</span><span>★ Pitching</span><span>★ Validation</span><span>★ Collaboration</span><span>★ Communication</span>
+    <div class="master-layout reveal">
+      <article class="master-feature">
+        <span class="eyebrow eyebrow-inline">3-day learning arc</span>
+        <h3>Think. Build. Present.</h3>
+        <p>
+          Students move from problem discovery to solution building and finally to
+          investor-style pitching with mentor support throughout the bootcamp.
+        </p>
+        <div class="master-phases">
+          <div class="phase-card">
+            <strong>Day 1</strong>
+            <span>Mindset, problems, research, validation</span>
+          </div>
+          <div class="phase-card">
+            <strong>Day 2</strong>
+            <span>Product thinking, business model, pricing, AI tools</span>
+          </div>
+          <div class="phase-card">
+            <strong>Day 3</strong>
+            <span>Communication, pitching, feedback, final presentation</span>
+          </div>
+        </div>
+      </article>
+      <div class="master-grid">
+        <article class="master-card master-card-rose">
+          <span>01</span>
+          <h4>Critical Thinking</h4>
+          <p>Break big problems into clear, workable next steps.</p>
+        </article>
+        <article class="master-card master-card-white">
+          <span>02</span>
+          <h4>Creativity</h4>
+          <p>Generate better ideas and shape them into practical concepts.</p>
+        </article>
+        <article class="master-card master-card-cream">
+          <span>03</span>
+          <h4>Communication</h4>
+          <p>Explain ideas clearly in teams, discussions and presentations.</p>
+        </article>
+        <article class="master-card master-card-white">
+          <span>04</span>
+          <h4>Startup Validation</h4>
+          <p>Check whether a solution solves a real need before building.</p>
+        </article>
+        <article class="master-card master-card-white">
+          <span>05</span>
+          <h4>Finance Basics</h4>
+          <p>Learn simple revenue, pricing and unit economics basics.</p>
+        </article>
+        <article class="master-card master-card-rose">
+          <span>06</span>
+          <h4>Collaboration</h4>
+          <p>Work in teams, share roles, and build stronger group outcomes.</p>
+        </article>
+        <article class="master-card master-card-cream">
+          <span>07</span>
+          <h4>AI for Startups</h4>
+          <p>Use modern tools to brainstorm, structure and move faster.</p>
+        </article>
+        <article class="master-card master-card-white">
+          <span>08</span>
+          <h4>Founder Pitching</h4>
+          <p>Craft a structured startup pitch and deliver it with confidence.</p>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MENTORS -->
-<section id="mentors" class="section section-tight">
+<section id="learn" class="section">
+  <div class="container learn-layout">
+    <div class="learn-copy reveal">
+      <span class="eyebrow">Learning Outcomes</span>
+      <h2>What They Will <span class="grad">Learn</span></h2>
+      <p class="lead">
+        Build and validate a real startup idea with a strong execution focus.
+      </p>
+      <ul class="learn-list">
+        <li>Identify real customer problems worth solving.</li>
+        <li>Design a simple and practical solution.</li>
+        <li>Test whether people actually want the idea.</li>
+        <li>Define how the startup can generate revenue.</li>
+        <li>Map how the product reaches customers.</li>
+        <li>Estimate market potential realistically.</li>
+        <li>Create and deliver a structured investor pitch.</li>
+      </ul>
+    </div>
+    <div class="learn-media reveal">
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg"
+        alt="Students working together during the bootcamp"
+      />
+      <div class="learn-note">
+        <strong>Execution-focused learning</strong>
+        <p>Students do not just listen. They build, test and present.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mentors" class="section section-soft">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Mentors</span>
-      <h2>Learn From <span class="grad">IIT / IIM Alumni</span></h2>
-      <p>Founders, investors and operators with real battle scars.</p>
+      <h2>Learn From <span class="grad">Experienced Practitioners</span></h2>
+      <p>Founder-minded guidance, structured feedback, and practical support.</p>
     </div>
     <div class="mentor-grid">
-      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=12" alt="Mentor"></div><h4>Arjun Mehta</h4><p>Startup Founder · IIT Bombay</p></div>
-      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=32" alt="Mentor"></div><h4>Priya Rao</h4><p>Investor · IIM Ahmedabad</p></div>
-      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=15" alt="Mentor"></div><h4>Karan Shah</h4><p>AI Product Lead · IIT Madras</p></div>
-      <div class="mentor reveal"><div class="m-img"><img loading="lazy" src="https://i.pravatar.cc/300?img=45" alt="Mentor"></div><h4>Neha Verma</h4><p>VC Mentor · IIM Bangalore</p></div>
+      <article class="mentor reveal">
+        <div class="m-img">
+          <img src="https://i.pravatar.cc/300?img=12" alt="Mentor Arjun Mehta" />
+        </div>
+        <h3>Arjun Mehta</h3>
+        <p>Startup Founder and Product Mentor</p>
+      </article>
+      <article class="mentor reveal">
+        <div class="m-img">
+          <img src="https://i.pravatar.cc/300?img=32" alt="Mentor Priya Rao" />
+        </div>
+        <h3>Priya Rao</h3>
+        <p>Business Strategy and Investor Readiness Mentor</p>
+      </article>
+      <article class="mentor reveal">
+        <div class="m-img">
+          <img src="https://i.pravatar.cc/300?img=15" alt="Mentor Karan Shah" />
+        </div>
+        <h3>Karan Shah</h3>
+        <p>AI Product and Startup Operations Mentor</p>
+      </article>
+      <article class="mentor reveal">
+        <div class="m-img">
+          <img src="https://i.pravatar.cc/300?img=45" alt="Mentor Neha Verma" />
+        </div>
+        <h3>Neha Verma</h3>
+        <p>Pitching, Presentation and Growth Mentor</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- WHY JOIN — Redesigned: zigzag timeline + spotlight -->
-<section class="section dark">
+<section class="section">
   <div class="container">
-    <div class="section-head reveal"><span class="eyebrow">Why Join</span><h2>Built for <span class="grad">Real Outcomes</span></h2><p>Not just lectures — measurable wins you can put on your résumé and pitch deck.</p></div>
-    <div class="outcomes">
-      <div class="outcome-spot reveal">
-        <div class="spot-num">7</div>
-        <p>Career-defining outcomes packed into 3 days</p>
-        <div class="spot-pulse"></div>
-      </div>
-      <div class="outcome-list">
-        <div class="oc reveal"><span class="oc-i">01</span><div><h4>Real Startup Exposure</h4><p>Work on live ventures with founders.</p></div></div>
-        <div class="oc reveal"><span class="oc-i">02</span><div><h4>Founder Networking</h4><p>Peers, mentors, investors — IRL.</p></div></div>
-        <div class="oc reveal"><span class="oc-i">03</span><div><h4>Industry Certification</h4><p>Recognised completion certificate.</p></div></div>
-        <div class="oc reveal"><span class="oc-i">04</span><div><h4>Research DOI Support</h4><p>Get your work officially published.</p></div></div>
-        <div class="oc reveal"><span class="oc-i">05</span><div><h4>Pitch to Investors</h4><p>Live demo day with real VCs.</p></div></div>
-        <div class="oc reveal"><span class="oc-i">06</span><div><h4>Team Collaboration</h4><p>Find your co-founder here.</p></div></div>
-        <div class="oc reveal"><span class="oc-i">07</span><div><h4>Ecosystem Access</h4><p>WE HUB & startup network entry.</p></div></div>
+    <div class="section-head reveal">
+      <span class="eyebrow">3-Day Experience</span>
+      <h2>3-Day <span class="grad">Immersive Experience</span></h2>
+      <p>Every day moves students one step closer to a real startup pitch.</p>
+    </div>
+    <div class="days-grid">
+      <article class="day-card reveal">
+        <img
+          src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg"
+          alt="Day 1 workshop"
+        />
+        <div class="day-card-body">
+          <span class="day-date">Day 1 - May 15, 2026</span>
+          <h3>Discover and Define</h3>
+          <ul>
+            <li>Understand problems</li>
+            <li>Customer research</li>
+            <li>Validate your idea</li>
+          </ul>
+        </div>
+      </article>
+      <article class="day-card reveal">
+        <img
+          src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg"
+          alt="Day 2 team collaboration"
+        />
+        <div class="day-card-body">
+          <span class="day-date">Day 2 - May 16, 2026</span>
+          <h3>Build and Plan</h3>
+          <ul>
+            <li>Product and business model</li>
+            <li>Pricing and financial basics</li>
+            <li>Go-to-market strategy</li>
+          </ul>
+        </div>
+      </article>
+      <article class="day-card reveal">
+        <img
+          src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg"
+          alt="Day 3 pitch practice"
+        />
+        <div class="day-card-body">
+          <span class="day-date">Day 3 - May 17, 2026</span>
+          <h3>Pitch and Present</h3>
+          <ul>
+            <li>Create investor pitch</li>
+            <li>Practice and refine</li>
+            <li>Shark Tank style finale with parents invited</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="benefits" class="section section-soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Benefits</span>
+      <h2>Built for <span class="grad">Real Outcomes</span></h2>
+      <p>Practical outcomes students can see, share and build on after the bootcamp.</p>
+    </div>
+    <div class="outcome-board reveal">
+      <article class="outcome-feature">
+        <strong>7 outcomes</strong>
+        <img
+          class="outcome-feature-image"
+          src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg"
+          alt="Students collaborating closely during the bootcamp"
+        />
+        <h3>Meaningful progress in just 3 days.</h3>
+        <p>
+          The program is designed to create visible growth in confidence, clarity,
+          collaboration and startup thinking.
+        </p>
+      </article>
+      <div class="outcome-grid">
+        <article class="outcome-card">
+          <span>01</span>
+          <h4>Real Startup Exposure</h4>
+          <p>Students work on relevant ideas and practical frameworks.</p>
+        </article>
+        <article class="outcome-card">
+          <span>02</span>
+          <h4>Founder Networking</h4>
+          <p>Learn from practitioners and engage with like-minded peers.</p>
+        </article>
+        <article class="outcome-card">
+          <span>03</span>
+          <h4>Confidence in Presentation</h4>
+          <p>Speak with more structure, clarity and self-belief.</p>
+        </article>
+        <article class="outcome-card">
+          <span>04</span>
+          <h4>Research and Validation</h4>
+          <p>Think before building and test ideas with intention.</p>
+        </article>
+        <article class="outcome-card">
+          <span>05</span>
+          <h4>Investor-Style Pitch</h4>
+          <p>Present an idea with logic, storytelling and confidence.</p>
+        </article>
+        <article class="outcome-card">
+          <span>06</span>
+          <h4>Team Collaboration</h4>
+          <p>Share roles, work together and solve problems as a group.</p>
+        </article>
+        <article class="outcome-card outcome-card-wide">
+          <span>07</span>
+          <h4>Completion Recognition</h4>
+          <p>Certificate of completion and memorable project work.</p>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING — Split design -->
 <section id="pricing" class="section">
   <div class="container">
-    <div class="section-head reveal"><span class="eyebrow">Pricing</span><h2>Secure Your <span class="grad">Seat</span></h2></div>
+    <div class="section-head reveal">
+      <span class="eyebrow">Investment</span>
+      <h2>Secure Your <span class="grad">Spot</span></h2>
+      <p>A clear, lighter layout with the image visible and the offer details easy to scan.</p>
+    </div>
     <div class="price-split reveal">
       <div class="ps-left">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80" alt="Startup team collaborating" />
-        <div class="ps-overlay"></div>
-        <div class="ps-overlay-content">
-          <div class="ps-badge">🔥 Cohort 2026</div>
-          <h3>Join India's most intense<br/>3-day founder bootcamp.</h3>
-          <ul class="ps-list">
-            <li>✓ Pitch to real investors</li>
-            <li>✓ IIT / IIM alumni mentors</li>
-            <li>✓ Industry-recognized certificate</li>
-            <li>✓ Co-founder matching</li>
-          </ul>
+        <img
+          src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg"
+          alt="Students during the OneGrasp startup bootcamp"
+        />
+        <div class="ps-overlay-card">
+          <span class="eyebrow eyebrow-inline">Cohort 2026</span>
+          <h3>Three days of startup learning, teamwork and presentation practice.</h3>
+          <p>Inclusive of materials, mentorship and certification.</p>
         </div>
       </div>
       <div class="ps-right">
-        <div class="ribbon">Limited Time Offer</div>
-        <h3>3-Day Bootcamp Pass</h3>
-        <p class="ps-sub">May 15–17 · WE HUB, Hyderabad</p>
+        <div class="ribbon">Early Bird Offer</div>
+        <h3>3-Day Startup Bootcamp Pass</h3>
+        <p class="ps-sub">May 15, 16, 17, 2026 | Hyderabad</p>
         <div class="price-row">
-          <span class="strike">₹70,000</span>
-          <span class="price">₹18,000</span>
+          <span class="strike">&#8377;23,000</span>
+          <span class="price">&#8377;18,000</span>
         </div>
-        <p class="closing">⏳ Closing Soon · Only <span id="seats-left-2">23</span> seats left</p>
+        <p class="closing">
+          Offer valid till May 10, 2026 | Countdown: <span id="countdown">--</span>
+        </p>
         <ul class="incl">
-          <li>✓ 3 days of intensive sessions</li>
-          <li>✓ Certificate of completion</li>
-          <li>✓ Mentor 1:1 access</li>
-          <li>✓ Lunch & refreshments</li>
+          <li>All workshop materials and templates</li>
+          <li>Mentor guidance and group feedback</li>
+          <li>Certificate of completion</li>
+          <li>Hands-on team activities and pitch practice</li>
         </ul>
-        <button class="btn btn-primary btn-lg pulse w-full" onclick="payNow()">Pay ₹18,000 Now →</button>
-        <button class="btn btn-outline w-full" onclick="openRegister()">Register First</button>
-        <p class="secure-note">🔒 Secured by Razorpay · UPI / Cards / NetBanking</p>
+        <button class="btn btn-primary btn-lg w-full" onclick="payNow()">Pay &#8377;18,000 Now</button>
+        <button class="btn btn-outline w-full" onclick="openRegister()">Apply First</button>
+        <p class="secure-note">
+          Secure checkout can use Razorpay, or we can instantly share a payment link on WhatsApp.
+        </p>
       </div>
+    </div>
+    <div class="details-row">
+      <article class="detail-card reveal">
+        <span class="eyebrow eyebrow-inline">Program Details</span>
+        <ul class="detail-list">
+          <li><strong>Dates:</strong> May 15, 16, 17, 2026</li>
+          <li><strong>Location:</strong> Hyderabad</li>
+          <li><strong>Students:</strong> Grade 8 to 12</li>
+          <li><strong>Mode:</strong> In-person, hands-on</li>
+          <li><strong>Learning style:</strong> Team-based, collaborative, build and present</li>
+        </ul>
+      </article>
+      <article class="detail-card reveal">
+        <span class="eyebrow eyebrow-inline">Why Join</span>
+        <ul class="detail-list">
+          <li>Learn from experienced founders and startup practitioners.</li>
+          <li>Work on real-world frameworks used by startups.</li>
+          <li>Build confidence, leadership and entrepreneurial mindset.</li>
+          <li>Certificate of completion and top team recognition.</li>
+        </ul>
+        <button class="btn btn-primary w-full" onclick="openRegister()">Apply Now</button>
+        <p class="detail-note">Small batch design for better mentor attention and team interaction.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section dark">
-  <div class="container">
-    <div class="section-head reveal"><span class="eyebrow">Testimonials</span><h2>Loved by <span class="grad">Future Founders</span></h2></div>
-    <div class="t-slider">
-      <div class="t-track" id="tTrack">
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=22" alt=""><p>"Changed how I think about building products. Pitched to a real VC by Day 3!"</p><strong>Rohan, 19 · Hyderabad</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=47" alt=""><p>"The AI sessions alone were worth 10x the price. Premium experience."</p><strong>Aditi, 21 · Bangalore</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=33" alt=""><p>"Met my co-founder here. We've raised pre-seed since."</p><strong>Vikram, 22 · Mumbai</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=5" alt=""><p>"From zero idea to a validated MVP in 72 hours. The mentors were unreal."</p><strong>Sneha, 20 · Pune</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=14" alt=""><p>"The Shark Tank pitch session was the best 30 minutes of my college life."</p><strong>Aryan, 18 · Hyderabad</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=49" alt=""><p>"OneGrasp gave me clarity I couldn't get from a year of YouTube tutorials."</p><strong>Ishita, 22 · Delhi</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=11" alt=""><p>"Finance + AI sessions back-to-back blew my mind. Already shipping my SaaS."</p><strong>Karthik, 23 · Chennai</strong><div class="stars">★★★★★</div></div>
-        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=44" alt=""><p>"Best investment my parents ever made on my education. Worth every rupee."</p><strong>Meera, 19 · Kolkata</strong><div class="stars">★★★★★</div></div>
+<section id="join" class="section section-soft">
+  <div class="container inside-layout">
+    <div class="inside-copy reveal">
+      <span class="eyebrow">Inside The Bootcamp</span>
+      <h2>What the <span class="grad">experience feels like</span></h2>
+      <p>
+        Students spend the bootcamp in active team discussions, guided work sprints,
+        mentor checkpoints and final presentation practice. It feels energetic, but
+        structured and supportive from start to finish.
+      </p>
+      <div class="inside-notes">
+        <article class="inside-note-card">
+          <h3>Workshop Sprints</h3>
+          <p>Short focused sessions where ideas move from rough thought to clear concept.</p>
+        </article>
+        <article class="inside-note-card">
+          <h3>Mentor Feedback</h3>
+          <p>Students get direct questions, prompts and feedback that sharpen their thinking.</p>
+        </article>
+        <article class="inside-note-card">
+          <h3>Team Presentation</h3>
+          <p>Every team prepares for a founder-style pitch and learns how to present clearly.</p>
+        </article>
       </div>
-      <div class="t-dots" id="tDots"></div>
+      <div class="join-panel">
+        <h3>Who Can Join?</h3>
+        <p>
+          Grade 8 to 12 students who are curious, creative, and excited to explore
+          entrepreneurship, innovation and leadership.
+        </p>
+      </div>
+      <div class="inside-strip">
+        <div class="inside-strip-item">
+          <strong>Guided teams</strong>
+          <span>Small-group learning and active collaboration</span>
+        </div>
+        <div class="inside-strip-item">
+          <strong>Mentor check-ins</strong>
+          <span>Regular prompts and practical founder feedback</span>
+        </div>
+        <div class="inside-strip-item">
+          <strong>Final pitch</strong>
+          <span>Clear presentation structure by the end of Day 3</span>
+        </div>
+      </div>
+    </div>
+    <div class="inside-gallery reveal">
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg"
+        alt="Students in collaborative startup workshop"
+        onclick="openLightbox(this.src)"
+      />
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg"
+        alt="Students building startup ideas together"
+        onclick="openLightbox(this.src)"
+      />
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg"
+        alt="Mentor-led bootcamp activity"
+        onclick="openLightbox(this.src)"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80"
+        alt="Team brainstorming in a workshop"
+        onclick="openLightbox(this.src)"
+      />
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section">
   <div class="container">
-    <div class="section-head reveal"><span class="eyebrow">Gallery</span><h2>Inside The <span class="grad">Bootcamp</span></h2></div>
-    <div class="gallery">
-      <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" alt="g1" onclick="openLightbox(this.src)">
-      <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM-1.jpeg" alt="g2" onclick="openLightbox(this.src)">
-      <img loading="lazy" src="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.37-PM.jpeg" alt="g3" onclick="openLightbox(this.src)">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600" alt="g4" onclick="openLightbox(this.src)">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600" alt="g5" onclick="openLightbox(this.src)">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600" alt="g6" onclick="openLightbox(this.src)">
+    <div class="section-head reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>Loved by <span class="grad">Future Builders</span></h2>
+      <p>Encouraging feedback from students who value structure, clarity and confidence.</p>
+    </div>
+    <div class="testimonial-grid">
+      <article class="testimonial-card reveal">
+        <p>
+          "The best part was learning how to turn a small idea into a real business pitch."
+        </p>
+        <strong>Rohan, Hyderabad</strong>
+      </article>
+      <article class="testimonial-card reveal">
+        <p>
+          "It felt practical and motivating. We learned by doing, not only by listening."
+        </p>
+        <strong>Aditi, Bengaluru</strong>
+      </article>
+      <article class="testimonial-card reveal">
+        <p>
+          "The mentors made complex startup concepts feel simple and manageable."
+        </p>
+        <strong>Vikram, Mumbai</strong>
+      </article>
+      <article class="testimonial-card reveal">
+        <p>
+          "Pitching in front of others really improved my confidence."
+        </p>
+        <strong>Meera, Kolkata</strong>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="section dark">
+<section id="faq" class="section section-soft">
   <div class="container narrow">
-    <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Questions, <span class="grad">Answered</span></h2></div>
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQs</span>
+      <h2>Questions, <span class="grad">Answered</span></h2>
+    </div>
+    <div class="faq-support reveal">
+      <div>
+        <strong>Need a faster answer?</strong>
+        <p>Talk to the team directly on WhatsApp or request the brochure instantly.</p>
+      </div>
+      <div class="faq-support-actions">
+        <a class="btn btn-primary" href="https://wa.me/919871167234" target="_blank" rel="noopener">WhatsApp Us</a>
+        <button class="btn btn-outline" onclick="downloadBrochure()">Get Brochure</button>
+      </div>
+    </div>
     <div class="faq">
-      <details><summary>Who can join?</summary><p>Students aged 14-25 passionate about startups, innovation and leadership.</p></details>
-      <details><summary>Is a certificate included?</summary><p>Yes — every participant receives an industry-recognized certificate.</p></details>
-      <details><summary>Is prior startup knowledge needed?</summary><p>No prior experience required. The program is built for beginners and intermediates alike.</p></details>
-      <details><summary>Will there be team activities?</summary><p>Absolutely — collaboration, hackathons, and pitching are core to the program.</p></details>
-      <details><summary>Is payment refundable?</summary><p>Registration fees are non-refundable but transferable up to 7 days before the event.</p></details>
+      <details class="reveal">
+        <summary>Who can join?</summary>
+        <p>Grade 8 to 12 students who want practical exposure to startups and pitching.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is a certificate included?</summary>
+        <p>Yes. Every participant receives a certificate of completion.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is prior startup knowledge needed?</summary>
+        <p>No. The bootcamp is designed to support beginners as well as curious early learners.</p>
+      </details>
+      <details class="reveal">
+        <summary>Will there be team activities?</summary>
+        <p>Yes. Collaboration and guided teamwork are core parts of the experience.</p>
+      </details>
+      <details class="reveal">
+        <summary>How does payment work?</summary>
+        <p>
+          Payment can go through your Razorpay checkout once configured, or students can receive
+          a direct payment link instantly on WhatsApp.
+        </p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="section final-cta">
-  <div class="cta-bg"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
-  <div class="container center reveal">
-    <h2>Your Startup Journey<br/><span class="grad">Starts Here.</span></h2>
-    <p>Join 500+ ambitious founders. Limited seats. Closing soon.</p>
-    <div class="hero-cta center">
-      <button class="btn btn-primary btn-lg pulse" onclick="openRegister()">Register Now →</button>
-      <a class="btn btn-outline btn-lg" href="https://wa.me/918977760441">Talk to Team</a>
+<section id="contact" class="section final-cta">
+  <div class="container">
+    <div class="cta-panel reveal">
+      <span class="eyebrow">Final Call</span>
+      <h2>Turn Ideas Into <span class="grad">Impact</span></h2>
+      <p>Applications are open for the next 3-day startup bootcamp experience.</p>
+      <div class="contact-actions">
+        <a class="contact-card" href="https://wa.me/919871167234" target="_blank" rel="noopener">
+          <strong>WhatsApp Us</strong>
+          <span>+91 98711 67234</span>
+        </a>
+        <a class="contact-card" href="tel:+919871167234">
+          <strong>Call Now</strong>
+          <span>+91 98711 67234</span>
+        </a>
+        <a class="contact-card" href="mailto:hello@onegrasp.in">
+          <strong>Email Us</strong>
+          <span>hello@onegrasp.in</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container foot-grid">
     <div>
-      <img src="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png" alt="OneGrasp" class="foot-logo" />
-      <p>Building the next generation of founders.</p>
+      <img
+        src="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png"
+        alt="OneGrasp"
+        class="foot-logo"
+      />
+      <p>Empowering young minds to think, build and create the future.</p>
     </div>
     <div>
       <h5>Quick Links</h5>
-      <a href="#about">About</a><a href="#learn">Curriculum</a><a href="#mentors">Mentors</a><a href="#pricing">Pricing</a>
+      <a href="#program">Program</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#faq">FAQs</a>
     </div>
     <div>
       <h5>Contact</h5>
-      <a href="mailto:hello@onegrasp.com">hello@onegrasp.com</a>
-      <a href="tel:+918977760441">+91 89777 60441</a>
-      <a href="tel:+918977760442">+91 89777 60442</a>
-      <a href="tel:+918977760443">+91 89777 60443</a>
-      <a>Hyderabad, India</a>
+      <a href="mailto:hello@onegrasp.in">hello@onegrasp.in</a>
+      <a href="tel:+919871167234">+91 98711 67234</a>
+      <a href="#join">Who Can Join</a>
+      <a href="#pricing">Pricing</a>
     </div>
     <div>
       <h5>Follow</h5>
       <div class="socials">
         <a href="https://www.instagram.com/onegrasp/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 5.4a4.4 4.4 0 100 8.8 4.4 4.4 0 000-8.8zm0 7.2a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm5.6-7.4a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/onegrasp/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5v1.8H16l-.4 2.9h-2.2v7A10 10 0 0022 12z"/></svg>
         </a>
         <a href="https://www.linkedin.com/company/onegrasp/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5V9.5h3V19zM6.5 8.2A1.7 1.7 0 116.5 5a1.7 1.7 0 010 3.2zM19 19h-3v-4.7c0-1.1 0-2.6-1.6-2.6S12.6 13 12.6 14.2V19h-3V9.5h2.9V11h.04a3.2 3.2 0 012.9-1.6c3.1 0 3.6 2 3.6 4.7V19z"/></svg>
@@ -362,42 +810,40 @@
       </div>
     </div>
   </div>
-  <div class="copy">© 2026 OneGrasp. All rights reserved. · Hyderabad, India</div>
+  <div class="copy">&copy; 2026 OneGrasp. All rights reserved.</div>
 </footer>
 
-<!-- WhatsApp float -->
-<a id="whatsapp-float" href="https://wa.me/918977760441" aria-label="WhatsApp" target="_blank">
+<a id="whatsapp-float" href="https://wa.me/919871167234" aria-label="WhatsApp" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20.52 3.48A11.88 11.88 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.12 1.6 5.92L0 24l6.4-1.68a11.86 11.86 0 0 0 5.65 1.44h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.39-8.44zM12.06 21.5h-.01a9.7 9.7 0 0 1-4.95-1.36l-.36-.21-3.8 1 1.02-3.7-.23-.38a9.66 9.66 0 0 1-1.5-5.16c0-5.36 4.36-9.72 9.72-9.72 2.6 0 5.04 1.01 6.87 2.85a9.65 9.65 0 0 1 2.85 6.87c0 5.36-4.36 9.72-9.61 9.72z"/></svg>
 </a>
 
-<!-- Toasts -->
 <div id="toasts"></div>
 
-<!-- Register Modal -->
 <div id="modal" class="modal-bg" onclick="if(event.target===this)closeRegister()">
-  <div class="modal glass">
-    <button class="x" onclick="closeRegister()">×</button>
-    <h3>Register for Bootcamp</h3>
-    <p class="sub">May 15-17 · WE HUB Hyderabad</p>
+  <div class="modal">
+    <button class="x" onclick="closeRegister()" aria-label="Close registration form">x</button>
+    <h3>Register for OneGrasp Bootcamp</h3>
+    <p class="sub">May 15 to 17, 2026 | Hyderabad</p>
     <form onsubmit="submitForm(event)">
       <input required name="name" placeholder="Full Name" />
-      <input required name="phone" placeholder="Phone" type="tel" />
-      <input required name="email" placeholder="Email" type="email" />
+      <input required name="phone" placeholder="Phone Number" type="tel" />
+      <input required name="email" placeholder="Email Address" type="email" />
       <div class="row">
-        <input required name="age" placeholder="Age" type="number" min="10" max="60" />
+        <input required name="age" placeholder="Age" type="number" min="10" max="18" />
         <input required name="city" placeholder="City" />
       </div>
-      <input required name="school" placeholder="School / College" />
+      <input required name="school" placeholder="School" />
       <div class="row">
-        <button type="submit" class="btn btn-outline w-full">Register</button>
-        <button type="button" class="btn btn-primary w-full pulse" onclick="payNow()">Pay Now ₹18,000</button>
+        <button type="submit" class="btn btn-outline w-full">Send Registration</button>
+        <button type="button" class="btn btn-primary w-full" onclick="payNow()">Pay Now</button>
       </div>
     </form>
   </div>
 </div>
 
-<!-- Lightbox -->
-<div id="lightbox" onclick="this.classList.remove('open')"><img id="lbImg" alt=""></div>
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lbImg" alt="Expanded bootcamp image" />
+</div>
 
 <script src="script.js" defer></script>
 </body>

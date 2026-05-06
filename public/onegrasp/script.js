@@ -1,169 +1,316 @@
-// Preloader
-window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('preloader').classList.add('hide'), 600);
-});
+const BOOTCAMP_CONFIG = {
+  brochureLink: "",
+  paymentLink: "https://pages.razorpay.com/pl_Sm13Yy4HElWZmG/view",
+  razorpayKey: "",
+  amount: 1800000,
+  amountLabel: "18,000",
+  phone: "919871167234",
+  email: "hello@onegrasp.in",
+  closingDate: "2026-05-10T23:59:59+05:30",
+};
 
-// Scroll progress
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  const p = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-  document.getElementById('scroll-progress').style.width = p + '%';
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
-});
+const preloader = document.getElementById("preloader");
+const navbar = document.getElementById("navbar");
+const modal = document.getElementById("modal");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lbImg");
+const scrollProgress = document.getElementById("scroll-progress");
+const countdownEl = document.getElementById("countdown");
 
-// Cursor glow
-document.addEventListener('mousemove', e => {
-  const c = document.getElementById('cursor-glow');
-  c.style.left = e.clientX + 'px';
-  c.style.top = e.clientY + 'px';
-});
+const activityStories = [
+  {
+    eyebrow: "City Spotlight",
+    message: "Hyderabad is the host city for this in-person founder bootcamp.",
+  },
+  {
+    eyebrow: "City Spotlight",
+    message: "Students from Pune can request the brochure early to plan the trip comfortably.",
+  },
+  {
+    eyebrow: "Program Flow",
+    message: "Day 3 ends with a founder-style pitch presentation and mentor feedback.",
+  },
+  {
+    eyebrow: "Build Mode",
+    message: "Teams move from idea discovery to validation and final pitch across 3 days.",
+  },
+  {
+    eyebrow: "Quick Help",
+    message: "WhatsApp support is available for brochure, pricing and payment questions.",
+  },
+];
 
-// Particles
-const pBox = document.getElementById('particles');
-for (let i = 0; i < 24; i++) {
-  const p = document.createElement('div');
-  p.className = 'particle';
-  p.style.left = Math.random() * 100 + '%';
-  p.style.animationDuration = 8 + Math.random() * 12 + 's';
-  p.style.animationDelay = -Math.random() * 12 + 's';
-  p.style.opacity = 0.2 + Math.random() * 0.5;
-  p.style.transform = `scale(${0.4 + Math.random() * 1.4})`;
-  pBox.appendChild(p);
-}
+let activityIndex = 0;
 
-// Reveal on scroll
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+function handleScroll() {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  const percent = scrollHeight > clientHeight ? (scrollTop / (scrollHeight - clientHeight)) * 100 : 0;
 
-// Animated counter
-const countObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting && !e.target.dataset.done) {
-      e.target.dataset.done = 1;
-      const target = +e.target.dataset.count;
-      let cur = 0;
-      const step = target / 60;
-      const t = setInterval(() => {
-        cur += step;
-        if (cur >= target) { cur = target; clearInterval(t); }
-        e.target.textContent = Math.round(cur) + '+';
-      }, 25);
-    }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
-
-// Countdown
-const target = new Date();
-target.setDate(target.getDate() + 2);
-target.setHours(target.getHours() + 6);
-function tick() {
-  const diff = target - new Date();
-  if (diff <= 0) return;
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff / 3600000) % 24);
-  const m = Math.floor((diff / 60000) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-  document.getElementById('countdown').textContent = `${d}d ${h}h ${m}m ${s}s`;
-}
-setInterval(tick, 1000); tick();
-
-// Seats decreasing
-let seats = 23;
-setInterval(() => {
-  if (Math.random() > 0.7 && seats > 5) {
-    seats--;
-    document.getElementById('seats-left').textContent = seats;
-    const s2 = document.getElementById('seats-left-2');
-    if (s2) s2.textContent = seats;
+  if (scrollProgress) {
+    scrollProgress.style.width = `${percent}%`;
   }
-}, 18000);
 
-// Modal
-function openRegister(){ document.getElementById('modal').classList.add('open'); }
-function closeRegister(){ document.getElementById('modal').classList.remove('open'); }
-window.openRegister = openRegister; window.closeRegister = closeRegister;
-
-function submitForm(e){
-  e.preventDefault();
-  toast('✓ Registered! Complete payment to confirm your seat.');
-  setTimeout(payNow, 800);
+  if (navbar) {
+    navbar.classList.toggle("scrolled", window.scrollY > 12);
+  }
 }
-window.submitForm = submitForm;
 
-// Razorpay
-function payNow(){
-  if (typeof Razorpay === 'undefined'){ toast('⚠️ Loading payment gateway...'); return; }
-  const options = {
-    key: "YOUR_KEY",
-    amount: "1800000",
-    currency: "INR",
-    name: "OneGrasp Startup Bootcamp",
-    description: "3-Day Bootcamp Registration",
-    image: "https://onegrasp.com/favicon.ico",
-    theme: { color: "#DB3433" },
-    handler: function(r){ toast('🎉 Payment success! ID: ' + r.razorpay_payment_id); },
-    modal: { ondismiss: () => toast('Payment cancelled') }
-  };
-  try { new Razorpay(options).open(); }
-  catch(e){ toast('Demo mode — connect your Razorpay key.'); }
+function startRevealAnimations() {
+  const items = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    items.forEach((item) => item.classList.add("in"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14 }
+  );
+
+  items.forEach((item) => observer.observe(item));
 }
+
+function updateCountdown() {
+  if (!countdownEl) {
+    return;
+  }
+
+  const now = new Date().getTime();
+  const target = new Date(BOOTCAMP_CONFIG.closingDate).getTime();
+  const diff = target - now;
+
+  if (diff <= 0) {
+    countdownEl.textContent = "Offer closed";
+    return;
+  }
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+  countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+function syncBodyLock() {
+  const hasOverlayOpen =
+    (modal && modal.classList.contains("open")) ||
+    (lightbox && lightbox.classList.contains("open"));
+
+  document.body.classList.toggle("modal-open", Boolean(hasOverlayOpen));
+}
+
+function toast(payload) {
+  const toastRoot = document.getElementById("toasts");
+  if (!toastRoot) {
+    return;
+  }
+
+  const data = typeof payload === "string" ? { message: payload } : payload;
+  const item = document.createElement("div");
+  item.className = "toast";
+
+  if (data.eyebrow) {
+    const eyebrow = document.createElement("span");
+    eyebrow.className = "toast-eyebrow";
+    eyebrow.textContent = data.eyebrow;
+    item.appendChild(eyebrow);
+  }
+
+  const message = document.createElement("div");
+  message.className = "toast-message";
+  message.textContent = data.message;
+  item.appendChild(message);
+
+  toastRoot.appendChild(item);
+
+  window.setTimeout(() => {
+    item.classList.add("out");
+    window.setTimeout(() => item.remove(), 240);
+  }, 3600);
+}
+
+function showActivityStory() {
+  toast(activityStories[activityIndex % activityStories.length]);
+  activityIndex += 1;
+}
+
+function openExternal(url) {
+  const opened = window.open(url, "_blank", "noopener");
+  if (!opened) {
+    window.location.href = url;
+  }
+}
+
+function buildWhatsAppLink(message) {
+  return `https://wa.me/${BOOTCAMP_CONFIG.phone}?text=${encodeURIComponent(message)}`;
+}
+
+function openRegister() {
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.add("open");
+  syncBodyLock();
+}
+
+function closeRegister() {
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("open");
+  syncBodyLock();
+}
+
+function downloadBrochure() {
+  if (BOOTCAMP_CONFIG.brochureLink) {
+    openExternal(BOOTCAMP_CONFIG.brochureLink);
+    return;
+  }
+
+  openExternal(
+    buildWhatsAppLink(
+      "Hi OneGrasp, please share the Startup Bootcamp brochure."
+    )
+  );
+  toast({ eyebrow: "Brochure", message: "Opening WhatsApp to request the brochure." });
+}
+
+function payNow() {
+  if (BOOTCAMP_CONFIG.paymentLink) {
+    openExternal(BOOTCAMP_CONFIG.paymentLink);
+    return;
+  }
+
+  if (
+    typeof Razorpay !== "undefined" &&
+    BOOTCAMP_CONFIG.razorpayKey &&
+    BOOTCAMP_CONFIG.razorpayKey !== "YOUR_KEY"
+  ) {
+    const options = {
+      key: BOOTCAMP_CONFIG.razorpayKey,
+      amount: String(BOOTCAMP_CONFIG.amount),
+      currency: "INR",
+      name: "OneGrasp Startup Bootcamp",
+      description: "3-Day Bootcamp Registration",
+      image: "https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png",
+      theme: { color: "#DB3433" },
+      handler(response) {
+        toast({
+          eyebrow: "Payment",
+          message: `Payment successful: ${response.razorpay_payment_id}`,
+        });
+      },
+      modal: {
+        ondismiss() {
+          toast({ eyebrow: "Payment", message: "Payment window closed." });
+        },
+      },
+    };
+
+    try {
+      new Razorpay(options).open();
+      return;
+    } catch (error) {
+      toast({
+        eyebrow: "Payment",
+        message: "Checkout could not open. Redirecting to WhatsApp support.",
+      });
+    }
+  }
+
+  openExternal(
+    buildWhatsAppLink(
+      "Hi OneGrasp, I want to secure my seat for the Startup Bootcamp. Please share the payment link."
+    )
+  );
+  toast({
+    eyebrow: "Payment Help",
+    message: "Opening WhatsApp for payment support.",
+  });
+}
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+  const message = [
+    "Hi OneGrasp, I would like to register for the Startup Bootcamp.",
+    "",
+    `Name: ${formData.get("name") || ""}`,
+    `Phone: ${formData.get("phone") || ""}`,
+    `Email: ${formData.get("email") || ""}`,
+    `Age: ${formData.get("age") || ""}`,
+    `City: ${formData.get("city") || ""}`,
+    `School: ${formData.get("school") || ""}`,
+  ].join("\n");
+
+  openExternal(buildWhatsAppLink(message));
+  form.reset();
+  closeRegister();
+  toast({
+    eyebrow: "Registration",
+    message: "Registration details are ready to send on WhatsApp.",
+  });
+}
+
+function openLightbox(src) {
+  if (!lightbox || !lightboxImage) {
+    return;
+  }
+
+  lightboxImage.src = src;
+  lightbox.classList.add("open");
+  syncBodyLock();
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage) {
+    return;
+  }
+
+  lightbox.classList.remove("open");
+  lightboxImage.src = "";
+  syncBodyLock();
+}
+
+window.openRegister = openRegister;
+window.closeRegister = closeRegister;
+window.downloadBrochure = downloadBrochure;
 window.payNow = payNow;
-
-// Lightbox
-function openLightbox(src){
-  document.getElementById('lbImg').src = src;
-  document.getElementById('lightbox').classList.add('open');
-}
+window.submitForm = submitForm;
 window.openLightbox = openLightbox;
-
-// Testimonials slider
-const track = document.getElementById('tTrack');
-const dots = document.getElementById('tDots');
-const cards = track.children.length;
-let idx = 0;
-for (let i = 0; i < cards; i++){
-  const d = document.createElement('span');
-  d.onclick = () => goSlide(i);
-  dots.appendChild(d);
-}
-function goSlide(i){
-  idx = i;
-  const w = track.firstElementChild.offsetWidth + 20;
-  track.style.transform = `translateX(-${i * w}px)`;
-  [...dots.children].forEach((d, k) => d.classList.toggle('on', k === i));
-}
-goSlide(0);
-setInterval(() => goSlide((idx + 1) % cards), 5000);
-
-// Toasts
-function toast(msg){
-  const t = document.createElement('div');
-  t.className = 'toast';
-  t.textContent = msg;
-  document.getElementById('toasts').appendChild(t);
-  setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 400); }, 4500);
-}
+window.closeLightbox = closeLightbox;
 window.toast = toast;
 
-// Urgency popups
-const urgency = [
-  '⚡ 17 students registered today',
-  '⏳ Registration closes in 2 days',
-  '🔥 Seats filling fast — only ' + seats + ' left',
-  '🎯 Someone from Hyderabad just registered',
-  '💼 IIM mentor session added'
-];
-let uIdx = 0;
-setTimeout(function loop(){
-  toast(urgency[uIdx % urgency.length]);
-  uIdx++;
-  setTimeout(loop, 12000 + Math.random() * 10000);
-}, 5000);
+window.addEventListener("load", () => {
+  updateCountdown();
+  handleScroll();
+  startRevealAnimations();
 
-// ESC closes modal
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape'){ closeRegister(); document.getElementById('lightbox').classList.remove('open'); }
+  if (preloader) {
+    window.setTimeout(() => preloader.classList.add("hide"), 350);
+  }
+
+  window.setTimeout(showActivityStory, 4200);
+  window.setInterval(showActivityStory, 14000);
+});
+
+window.addEventListener("scroll", handleScroll, { passive: true });
+window.setInterval(updateCountdown, 1000);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeRegister();
+    closeLightbox();
+  }
 });
