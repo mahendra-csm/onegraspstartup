@@ -74,7 +74,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .container{max-width:var(--container);margin:auto;padding:0 24px}
 .container.narrow{max-width:840px}
 .container.center{text-align:center}
-.section{padding:110px 0;position:relative;overflow:hidden}
+.section{padding:90px 0;position:relative;overflow:hidden}
+.section-tight{padding:70px 0}
 .section.dark{background:linear-gradient(180deg,#0b0b0e,#15161c);color:#fff}
 .section.dark .glass{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08)}
 .section.dark p{color:#cfcfd6}
