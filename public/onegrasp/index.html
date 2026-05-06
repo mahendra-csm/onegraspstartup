@@ -10,7 +10,7 @@
 <meta property="og:description" content="Build Ideas. Lead Tomorrow. May 15-17, WE HUB Hyderabad." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://onegrasp.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-2.22.36-PM.jpeg" />
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" href="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,18 +30,22 @@
 
 <!-- Sticky Top Bar -->
 <div id="sticky-bar">
-  <div class="sb-left"><span class="pulse-dot"></span> Seats Filling Fast — <strong>Only <span id="seats-left">23</span> seats left</strong></div>
-  <div class="sb-mid">Closes in: <span id="countdown">--</span></div>
-  <div class="sb-right">
-    <button class="btn btn-ghost" onclick="openRegister()">Register</button>
-    <button class="btn btn-primary pulse" onclick="payNow()">Pay ₹18,000</button>
+  <div class="sb-inner">
+    <div class="sb-left"><span class="pulse-dot"></span> Seats Filling Fast — <strong>Only <span id="seats-left">23</span> left</strong></div>
+    <div class="sb-mid">⏳ Closes in: <span id="countdown">--</span></div>
+    <div class="sb-right">
+      <button class="btn btn-ghost btn-sm" onclick="openRegister()">Register</button>
+      <button class="btn btn-primary btn-sm pulse" onclick="payNow()">Pay ₹18,000</button>
+    </div>
   </div>
 </div>
 
 <!-- Navbar -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#" class="logo"><span class="logo-mark">OG</span><span class="logo-text">OneGrasp</span></a>
+    <a href="#" class="logo">
+      <img src="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png" alt="OneGrasp" class="logo-img" />
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#learn">Learn</a></li>
@@ -114,28 +118,71 @@
   </div>
 </section>
 
-<!-- LEARN -->
+<!-- LEARN — Redesigned: Bento + Hex/Marquee hybrid -->
 <section id="learn" class="section dark">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Curriculum</span>
       <h2>What You Will <span class="grad">Master</span></h2>
+      <p>Eight elite skills. Three intense days. One transformed founder.</p>
     </div>
-    <div class="learn-grid">
-      <div class="learn-card glass reveal"><div class="ic">🧠</div><h4>Critical Thinking</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">💡</div><h4>Creativity</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">🗣️</div><h4>Communication</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">🤝</div><h4>Collaboration</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">💰</div><h4>Finance Basics</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">🚀</div><h4>Startup Validation</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">🤖</div><h4>AI for Startups</h4></div>
-      <div class="learn-card glass reveal"><div class="ic">🦈</div><h4>Shark Tank Pitching</h4></div>
+    <div class="bento reveal">
+      <div class="bento-item bento-lg b-grad">
+        <div class="b-num">01</div>
+        <h3>Critical Thinking</h3>
+        <p>Solve like a founder — frameworks used by IIT/IIM alumni to break down ambiguity into action.</p>
+        <div class="b-tag">Day 1</div>
+      </div>
+      <div class="bento-item">
+        <div class="b-num">02</div>
+        <h4>Creativity</h4>
+        <p>Idea engines that never run dry.</p>
+      </div>
+      <div class="bento-item">
+        <div class="b-num">03</div>
+        <h4>Communication</h4>
+        <p>Speak so investors lean in.</p>
+      </div>
+      <div class="bento-item bento-wide b-dark">
+        <div class="b-num">04</div>
+        <h3>Startup Validation</h3>
+        <p>Test, learn, ship — without burning capital. Real customer-discovery sprints.</p>
+        <div class="b-tag">Day 2</div>
+      </div>
+      <div class="bento-item">
+        <div class="b-num">05</div>
+        <h4>Finance Basics</h4>
+        <p>Burn, runway, unit economics.</p>
+      </div>
+      <div class="bento-item">
+        <div class="b-num">06</div>
+        <h4>Collaboration</h4>
+        <p>Build co-founder chemistry.</p>
+      </div>
+      <div class="bento-item bento-wide b-grad">
+        <div class="b-num">07</div>
+        <h3>AI for Startups</h3>
+        <p>Use GPT, automation & no-code stacks to ship 10x faster than any competitor.</p>
+        <div class="b-tag">Day 3</div>
+      </div>
+      <div class="bento-item bento-lg b-dark">
+        <div class="b-num">08</div>
+        <h3>Shark Tank Pitching</h3>
+        <p>Pitch live to real investors. Walk out with feedback, network, and momentum.</p>
+        <div class="b-tag">Finale</div>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>★ Critical Thinking</span><span>★ Creativity</span><span>★ AI Tools</span><span>★ Finance</span><span>★ Pitching</span><span>★ Validation</span><span>★ Collaboration</span><span>★ Communication</span>
+        <span>★ Critical Thinking</span><span>★ Creativity</span><span>★ AI Tools</span><span>★ Finance</span><span>★ Pitching</span><span>★ Validation</span><span>★ Collaboration</span><span>★ Communication</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- MENTORS -->
-<section id="mentors" class="section">
+<section id="mentors" class="section section-tight">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Mentors</span>
@@ -151,30 +198,52 @@
   </div>
 </section>
 
-<!-- WHY JOIN -->
+<!-- WHY JOIN — Redesigned: zigzag timeline + spotlight -->
 <section class="section dark">
   <div class="container">
-    <div class="section-head reveal"><span class="eyebrow">Why Join</span><h2>Built for <span class="grad">Real Outcomes</span></h2></div>
-    <div class="why-row">
-      <div class="why-card glass reveal"><h4>Real Startup Exposure</h4><p>Work on live problems & ventures.</p></div>
-      <div class="why-card glass reveal"><h4>Networking</h4><p>Founders, peers, investors.</p></div>
-      <div class="why-card glass reveal"><h4>Certification</h4><p>Industry-recognized certificate.</p></div>
-      <div class="why-card glass reveal"><h4>Research DOI Support</h4><p>Publish your work officially.</p></div>
-      <div class="why-card glass reveal"><h4>Pitching Opportunities</h4><p>Pitch to real investors.</p></div>
-      <div class="why-card glass reveal"><h4>Team Collaboration</h4><p>Build with co-founders.</p></div>
-      <div class="why-card glass reveal"><h4>Ecosystem Access</h4><p>WE HUB & startup network.</p></div>
+    <div class="section-head reveal"><span class="eyebrow">Why Join</span><h2>Built for <span class="grad">Real Outcomes</span></h2><p>Not just lectures — measurable wins you can put on your résumé and pitch deck.</p></div>
+    <div class="outcomes">
+      <div class="outcome-spot reveal">
+        <div class="spot-num">7</div>
+        <p>Career-defining outcomes packed into 3 days</p>
+        <div class="spot-pulse"></div>
+      </div>
+      <div class="outcome-list">
+        <div class="oc reveal"><span class="oc-i">01</span><div><h4>Real Startup Exposure</h4><p>Work on live ventures with founders.</p></div></div>
+        <div class="oc reveal"><span class="oc-i">02</span><div><h4>Founder Networking</h4><p>Peers, mentors, investors — IRL.</p></div></div>
+        <div class="oc reveal"><span class="oc-i">03</span><div><h4>Industry Certification</h4><p>Recognised completion certificate.</p></div></div>
+        <div class="oc reveal"><span class="oc-i">04</span><div><h4>Research DOI Support</h4><p>Get your work officially published.</p></div></div>
+        <div class="oc reveal"><span class="oc-i">05</span><div><h4>Pitch to Investors</h4><p>Live demo day with real VCs.</p></div></div>
+        <div class="oc reveal"><span class="oc-i">06</span><div><h4>Team Collaboration</h4><p>Find your co-founder here.</p></div></div>
+        <div class="oc reveal"><span class="oc-i">07</span><div><h4>Ecosystem Access</h4><p>WE HUB & startup network entry.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- PRICING — Split design -->
 <section id="pricing" class="section">
   <div class="container">
     <div class="section-head reveal"><span class="eyebrow">Pricing</span><h2>Secure Your <span class="grad">Seat</span></h2></div>
-    <div class="price-wrap reveal">
-      <div class="price-card">
+    <div class="price-split reveal">
+      <div class="ps-left">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80" alt="Startup team collaborating" />
+        <div class="ps-overlay"></div>
+        <div class="ps-overlay-content">
+          <div class="ps-badge">🔥 Cohort 2026</div>
+          <h3>Join India's most intense<br/>3-day founder bootcamp.</h3>
+          <ul class="ps-list">
+            <li>✓ Pitch to real investors</li>
+            <li>✓ IIT / IIM alumni mentors</li>
+            <li>✓ Industry-recognized certificate</li>
+            <li>✓ Co-founder matching</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ps-right">
         <div class="ribbon">Limited Time Offer</div>
         <h3>3-Day Bootcamp Pass</h3>
+        <p class="ps-sub">May 15–17 · WE HUB, Hyderabad</p>
         <div class="price-row">
           <span class="strike">₹70,000</span>
           <span class="price">₹18,000</span>
@@ -184,11 +253,11 @@
           <li>✓ 3 days of intensive sessions</li>
           <li>✓ Certificate of completion</li>
           <li>✓ Mentor 1:1 access</li>
-          <li>✓ Pitching to real investors</li>
           <li>✓ Lunch & refreshments</li>
         </ul>
-        <button class="btn btn-primary btn-lg pulse w-full" onclick="payNow()">Secure Your Seat →</button>
-        <button class="btn btn-outline w-full" onclick="openRegister()">Register Form</button>
+        <button class="btn btn-primary btn-lg pulse w-full" onclick="payNow()">Pay ₹18,000 Now →</button>
+        <button class="btn btn-outline w-full" onclick="openRegister()">Register First</button>
+        <p class="secure-note">🔒 Secured by Razorpay · UPI / Cards / NetBanking</p>
       </div>
     </div>
   </div>
@@ -203,6 +272,11 @@
         <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=22" alt=""><p>"Changed how I think about building products. Pitched to a real VC by Day 3!"</p><strong>Rohan, 19 · Hyderabad</strong><div class="stars">★★★★★</div></div>
         <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=47" alt=""><p>"The AI sessions alone were worth 10x the price. Premium experience."</p><strong>Aditi, 21 · Bangalore</strong><div class="stars">★★★★★</div></div>
         <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=33" alt=""><p>"Met my co-founder here. We've raised pre-seed since."</p><strong>Vikram, 22 · Mumbai</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=5" alt=""><p>"From zero idea to a validated MVP in 72 hours. The mentors were unreal."</p><strong>Sneha, 20 · Pune</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=14" alt=""><p>"The Shark Tank pitch session was the best 30 minutes of my college life."</p><strong>Aryan, 18 · Hyderabad</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=49" alt=""><p>"OneGrasp gave me clarity I couldn't get from a year of YouTube tutorials."</p><strong>Ishita, 22 · Delhi</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=11" alt=""><p>"Finance + AI sessions back-to-back blew my mind. Already shipping my SaaS."</p><strong>Karthik, 23 · Chennai</strong><div class="stars">★★★★★</div></div>
+        <div class="t-card glass"><img src="https://i.pravatar.cc/100?img=44" alt=""><p>"Best investment my parents ever made on my education. Worth every rupee."</p><strong>Meera, 19 · Kolkata</strong><div class="stars">★★★★★</div></div>
       </div>
       <div class="t-dots" id="tDots"></div>
     </div>
@@ -246,7 +320,7 @@
     <p>Join 500+ ambitious founders. Limited seats. Closing soon.</p>
     <div class="hero-cta center">
       <button class="btn btn-primary btn-lg pulse" onclick="openRegister()">Register Now →</button>
-      <a class="btn btn-outline btn-lg" href="https://wa.me/919999999999">Talk to Team</a>
+      <a class="btn btn-outline btn-lg" href="https://wa.me/918977760441">Talk to Team</a>
     </div>
   </div>
 </section>
@@ -255,7 +329,7 @@
 <footer>
   <div class="container foot-grid">
     <div>
-      <div class="logo"><span class="logo-mark">OG</span><span class="logo-text">OneGrasp</span></div>
+      <img src="https://onegrasp.com/wp-content/uploads/2025/03/OneGrasp-logo.png" alt="OneGrasp" class="foot-logo" />
       <p>Building the next generation of founders.</p>
     </div>
     <div>
@@ -265,21 +339,34 @@
     <div>
       <h5>Contact</h5>
       <a href="mailto:hello@onegrasp.com">hello@onegrasp.com</a>
-      <a href="tel:+919999999999">+91 99999 99999</a>
-      <a>WE HUB, Hyderabad</a>
+      <a href="tel:+918977760441">+91 89777 60441</a>
+      <a href="tel:+918977760442">+91 89777 60442</a>
+      <a href="tel:+918977760443">+91 89777 60443</a>
+      <a>Hyderabad, India</a>
     </div>
     <div>
       <h5>Follow</h5>
       <div class="socials">
-        <a aria-label="Instagram">IG</a><a aria-label="LinkedIn">IN</a><a aria-label="YouTube">YT</a><a aria-label="X">X</a>
+        <a href="https://www.instagram.com/onegrasp/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 5.4a4.4 4.4 0 100 8.8 4.4 4.4 0 000-8.8zm0 7.2a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm5.6-7.4a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/onegrasp/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5v1.8H16l-.4 2.9h-2.2v7A10 10 0 0022 12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/onegrasp/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5V9.5h3V19zM6.5 8.2A1.7 1.7 0 116.5 5a1.7 1.7 0 010 3.2zM19 19h-3v-4.7c0-1.1 0-2.6-1.6-2.6S12.6 13 12.6 14.2V19h-3V9.5h2.9V11h.04a3.2 3.2 0 012.9-1.6c3.1 0 3.6 2 3.6 4.7V19z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@OneGrasp" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
       </div>
     </div>
   </div>
-  <div class="copy">© 2026 OneGrasp. All rights reserved.</div>
+  <div class="copy">© 2026 OneGrasp. All rights reserved. · Hyderabad, India</div>
 </footer>
 
 <!-- WhatsApp float -->
-<a id="whatsapp-float" href="https://wa.me/919999999999" aria-label="WhatsApp" target="_blank">
+<a id="whatsapp-float" href="https://wa.me/918977760441" aria-label="WhatsApp" target="_blank">
   <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20.52 3.48A11.88 11.88 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.12 1.6 5.92L0 24l6.4-1.68a11.86 11.86 0 0 0 5.65 1.44h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.39-8.44zM12.06 21.5h-.01a9.7 9.7 0 0 1-4.95-1.36l-.36-.21-3.8 1 1.02-3.7-.23-.38a9.66 9.66 0 0 1-1.5-5.16c0-5.36 4.36-9.72 9.72-9.72 2.6 0 5.04 1.01 6.87 2.85a9.65 9.65 0 0 1 2.85 6.87c0 5.36-4.36 9.72-9.61 9.72z"/></svg>
 </a>
 
